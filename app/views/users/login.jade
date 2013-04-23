@@ -1,0 +1,22 @@
+extends ../layouts/base
+
+block content
+	form.form-horizontal(method="post",action="/")
+		fieldset
+			legend 用户登录
+			div.control-group
+				label.control-label(for="username") 用户名
+				div.controls
+					input#username.input-xlarge(type="text",name="username")
+					p.help-block 你的账户名称，用于登录和显示
+			div.control-group
+				label.control-label(for="password") 口令
+				div.controls
+					input#password.input-xlarge(type="text",name="password")
+			div.control-group
+				div.controls
+					label.checkbox
+						input(type="checkbox") 
+						| Remember me
+					button.btn.btn-primary(type="submit") 立即登录
+					

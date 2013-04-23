@@ -1,0 +1,11 @@
+extends ./layouts/base
+
+block main
+	ul.breadcrumb.mt-10
+		li
+			a(href="/")= '首页'
+			span.divider= '/'
+		li.active
+			| 礼品卡
+
+block content

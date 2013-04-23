@@ -1,0 +1,15 @@
+extends ../../layouts/admin
+
+block formbox
+	.form-title
+		h3 
+			| 分类列表
+			.btn-group.pull-right
+				a.btn.btn-inverse.dropdown-toggle(href="#",data-toggle="dropdown")
+					管理选项
+					span.caret
+				ul.dropdown-menu
+					li
+						a(href="/admin/category/new") 新建
+						a(href="#") 发布
+						a(href="#") 删除

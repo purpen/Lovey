@@ -1,0 +1,67 @@
+extends ../layouts/base
+
+block content
+	header#overview.subhead
+		#filter-holder
+			.input-append.pull-right
+				.btn-toolbar
+					ul#filters.btn-group.filter-list
+						li#all
+							a.active.btn.grey(data-filter="*",href="#") All
+						li
+							a.btn.grey(data-filter=".news", href="#") News
+						li
+							a.btn.grey(data-filter=".sales", href="#") sales
+						li
+							a.btn.grey(data-filter=".tutorial", href="#") tutorial
+						li
+							a.btn.grey(data-filter=".uncategorized", href="#") Video
+		h1 悦生活
+		p.lead Always something going on....
+
+	#blog
+		#sortable.span9.isotope
+			.row-fluid
+				.span4.stagr.itope.tutorial.isotope-item
+					.thumbnail
+						.image-box
+							a(href="#")
+								img.attachment-blog.thumbnail(src="http://pixelgrapes.com/demo/bent/wp-content/uploads/2012/10/sale.jpg")
+						.text-box
+							h3
+								a(href="#") A Quick Tutorial
+							p
+								| Sed ut perspiciatis unde omnis iste natus
+							.article-footer
+								i.icon-comment.icon-white
+								small.
+									October 26th<cite class="pull-right" title="Source Title"><a href="http://pixelgrapes.com/demo/bent/?p=234">view»</a>
+
+		#sidebar
+			.span3
+				.sidebar-nav
+					.widget.widget_recent_entries
+						.widget-heading
+							h4.widget-title 最新
+						ul
+							li
+								a(href="#",title="") A Quick Tutorial
+					.widget.widget_archive
+						.widget-heading
+							h4.widget-title 归档
+						ul
+							li
+								a(href="#",title="") October 2012
+					.widget.widget_categories
+						.widget-heading
+							h4.widget-title 类别
+						ul
+							li.cat-item
+								a(href="#",title="") News
+					.widget.widget_meta
+						.widget-heading
+							h4.widget-title Meta
+						ul
+							li
+								a(href="#",title="") Entries <abbr title="Really Simple Syndication">RSS</abbr>
+							

@@ -1,0 +1,54 @@
+extends ../../layouts/admin
+
+block formbox
+	.form-title
+		h3 
+			| 文章列表
+			.btn-group.pull-right
+				a.btn.btn-inverse.dropdown-toggle(href="#",data-toggle="dropdown")
+					管理选项
+					span.caret
+				ul.dropdown-menu
+					li
+						a(href="/admin/articles/new") 新建
+						a(href="#") 发布
+						a(href="#") 删除
+	table.table.table-striped
+		thead
+			tr
+				th #
+				th 标题
+				th 类别
+				th 作者
+				th 发布时间
+				th 状态
+				th 管理操作
+		tbody
+			each article in articles
+				tr
+					td
+						input(type="checkbox",name="id[]")=article.id
+					td
+						a.title(href="#") #{article.title}
+					td
+					td.author
+					td
+						span= formatDate(article.create_at, "%Y-%m-%d, at %I:%M %p")
+					td
+						if (article.state == 2)
+							span.label.label-success 已发布
+						if (article.state == 1)
+							span.label 草稿箱
+						if (article.state == 0)
+							span.label.label-warning 已删除
+					td
+						form.center.form-inline.confirm(action="/admin/articles/"+article.id, method="post")
+							a.btn(href='/admin/articles/'+article._id+'/edit', title="编辑") 编辑
+							&nbsp;&nbsp;
+							input(type="hidden", name="_method", value="DELETE")
+							button.btn.btn-danger(type="submit") 删除
+	hr
+	if (pages > 1)
+		div.pagination
+			ul
+				!= createPagination(pages, page)

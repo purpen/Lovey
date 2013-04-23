@@ -1,0 +1,39 @@
+extends ../../layouts/admin
+
+block ajaxmsg
+	if (typeof errors !== 'undefined')
+		.fade.in.alert.alert-block.alert-error
+			a.close(data-dismiss="alert",href="javascript:void(0)") x
+			ul
+				each error in errors
+					li= error.type
+          
+block formbox
+	- var action = '/admin/assets'
+	if (!asset.isNew)
+		- action += '/'+asset.id
+	// Body content
+	form#article-from.form-horizontal(method="post",action=action,enctype="multipart/form-data")
+		if (!asset.isNew)
+			input(type="hidden",name="_method",value="PUT")
+		fieldset
+			#legend
+				legend=title
+			div.control-group
+				label(class="control-label", for="tags") 图片
+				.controls
+					div.fileupload.fileupload-new(data-provides="fileupload")
+						div.input-append
+							div.uneditable-input.span3
+								i.icon-file.fileupload-exists
+								span.fileupload-preview
+							span.btn.btn-file
+								span.fileupload-new Select file
+								span.fileupload-exists Change
+								input(type="file", name="image[]")
+							a.btn.fileupload-exists(href="#", data-dismiss="fileupload") Remove		
+			div.control-group
+				div.form-actions
+					button.btn.btn-primary(type="submit") 确认保存
+					&nbsp;
+					button.btn(type="button") 取消

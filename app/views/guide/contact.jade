@@ -1,0 +1,23 @@
+extends ../layouts/base
+
+block main
+	ul.breadcrumb.mt-10
+		li
+			a(href="/")= '首页'
+			span.divider= '/'
+		li.active
+			| 联系我们
+
+block content
+	div.featurette.contact
+		address
+			button.close(type="button",data-dismiss="alert")= 'x'
+			h4= '温馨提示!'
+			p= '尚品所经营进口食品均为严格精选良品，符合国际和生产国最严格标准，保证食品健康，安全。所经营品种均为正规渠道进口，保证正品新货，请放心购买。'
+			h4= '联系方式：'
+			| 销售客服：范先生
+			br
+			abbr(title="Phone")= '联系电话: '
+			| +86 186 0105 6101 
+			br
+			| 联系邮箱：loveyself@gmail.com

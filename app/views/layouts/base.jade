@@ -1,0 +1,16 @@
+!!! 5
+html
+	include ../includes/head
+	body
+		.wrapper
+			include ../includes/header
+			.container
+				.main-content.mt-20
+					.main-head
+						block main
+				.ajax-message
+					block ajaxmsg
+				block content
+				.push
+			include ../includes/footer
+			include ../includes/foot

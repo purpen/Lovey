@@ -1,0 +1,68 @@
+extends ../layouts/base
+
+block content
+	header#overview.subhead
+		#filter-holder
+			.input-append.pull-right
+				.btn-toolbar
+					ul#filters.btn-group.filter-list
+						li#all
+							a.active.btn.grey(data-filter="*",href="#") All
+						li
+							a.btn.grey(data-filter=".news", href="#") News
+						li
+							a.btn.grey(data-filter=".sales", href="#") sales
+						li
+							a.btn.grey(data-filter=".tutorial", href="#") tutorial
+						li
+							a.btn.grey(data-filter=".uncategorized", href="#") Video
+		h1 悦生活
+		p.lead Always something going on....
+
+	#blog
+		#sortable.span9.isotope
+			.row-fluid
+				each article in articles
+					.span4.stagr.itope.tutorial.isotope-item
+						.thumbnail
+							.image-box
+								a(href="#")
+									img.attachment-blog(src="/srcfile/#{article.asset_id}")
+							.text-box
+								h3
+									a(href="#") #{article.title}
+								p
+									| #{article.body}
+								.article-footer
+									i.icon-comment.icon-white
+									small= dateFormat(article.create_at, 'mm-dd HH:MM')
+										cite.pull-right(title="#{article.title}")
+											a(href="/blog/#{article.id}")
+												| view »
+		#sidebar
+			.span3
+				.sidebar-nav
+					.widget.widget_recent_entries
+						.widget-heading
+							h4.widget-title 最新
+						ul
+							li
+								a(href="#",title="") A Quick Tutorial
+					.widget.widget_archive
+						.widget-heading
+							h4.widget-title 归档
+						ul
+							li
+								a(href="#",title="") October 2012
+					.widget.widget_categories
+						.widget-heading
+							h4.widget-title 类别
+						ul
+							li.cat-item
+								a(href="#",title="") News
+					.widget.widget_meta
+						.widget-heading
+							h4.widget-title Meta
+						ul
+							li
+								a(href="#",title="") Entries <abbr title="Really Simple Syndication">RSS</abbr>

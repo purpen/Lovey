@@ -1,0 +1,362 @@
+body {
+  	padding-top: 80px;
+	padding-bottom: 20px;
+}
+a {
+  	color: #ef4036;
+}
+a:hover,a.focus {
+  	color: #93a657;
+}
+p {
+    color: #656565;
+    line-height: 16px;
+}
+.login {
+    padding: 10px 0;
+}
+ul {
+    margin: 0 0 9px;
+}
+ul, ol {
+    list-style: none outside none;
+}
+small {
+    font-size: 95%;
+}
+cite {
+    padding: 3px 8px;
+}
+.clearfix:after{ content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearfix {display: inline-table; +display:inline-block;}
+/* Hides from IE-mac */
+* html .clearfix {height: 1%;}.clearfix {display: block;}
+h1 {
+    font-size: 30px;
+    line-height: 36px;
+}
+h1 small {
+    font-size: 18px;
+}
+h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+h2 small {
+    font-size: 18px;
+}
+h3 {
+    font-size: 18px;
+    line-height: 27px;
+}
+h3 small {
+    font-size: 14px;
+}
+h4, h5, h6 {
+    line-height: 18px;
+}
+h4 {
+    font-size: 14px;
+}
+h4 small {
+    font-size: 12px;
+}
+h5 {
+    font-size: 12px;
+}
+h6 {
+    color: #999999;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+/* font-size */
+.ft10 {font-size:85%;} /* for setting 10px */
+.ft11 {font-size:93%;} /* for setting 11px */
+.ft12 {font-size:100%;} /* for setting 12px */
+.ft13 {font-size:108%;} /* for setting 13px */
+.ft14 {font-size:116%;} /* for setting 14px */
+.ft15 {font-size:123.1%;} /* for setting 15px */
+.ft16 {font-size:131%;} /* for setting 16px */
+.ft17 {font-size:138.5%;} /* for setting 17px */
+.ft18 {font-size:146.5%;} /* for setting 18px */
+.ft19 {font-size:153.9%;} /* for setting 19px */
+.ft20 {font-size:161.6%;} /* for setting 20px */
+.ft21 {font-size:167%;} /* for setting 21px */
+.ft22 {font-size:174%;} /* for setting 22px */
+.ft23 {font-size:182%;} /* for setting 23px */
+.ft24 {font-size:189%;} /* for setting 24px */
+.ft25 {font-size:197%;} /* for setting 25px */
+.ft26 {font-size:215%;} /* for setting 26px */
+
+/* float */
+.fl{float:left;display:inline;}
+.fr{float:right;display:inline;}
+
+/* margin padding */
+.m-0{margin:0;}
+.m-5{margin:5px;}
+.m-10{margin:10px;}
+.m-15{margin:15px;}.
+.m-20{margin:20px;}
+.mt-5{margin-top:5px;}
+.mb-5{margin-bottom:5px;}
+.ml-5{margin-left:5px;}
+.mr-5{margin-right:5px;}
+.mt-10{margin-top:10px;}
+.mb-10{margin-bottom:10px;}
+.ml-10{margin-left:10px;}
+.mr-10{margin-right:10px;}
+.mt-15{margin-top:15px;}
+.mb-15{margin-bottom:15px;}
+.ml-15{margin-left:15px;}
+.mr-15{margin-right:15px;}
+.mt-20{margin-top:20px;}
+.mt-40{margin-top:40px;}
+.mb-20{margin-bottom:20px;}
+.ml-19{margin-left:19px;}
+.ml-20{margin-left:20px;}
+.mr-20{margin-right:20px;}
+.mt-30{margin-top:30px;}
+.mb-30{margin-bottom:30px;}
+.ml-30{margin-left:30px;}
+.mr-30{margin-right:30px;}
+.ml-90{margin-left:90px;}
+.ml-93{margin-left:93px;}
+.p-0{padding:0;}
+.pt-0{padding-top:0;}
+.pr-0{padding-top:0;}
+.pb-0{padding-top:0;}
+.pl-0{padding-top:0;}
+.p-5{padding:5px;}
+.p-10{padding:10px;}
+.p-15{padding:15px;}
+.p-20{padding:20px;}
+.pt-5{padding-top:5px;}
+.pb-5{padding-bottom:5px;}
+.pl-5{padding-left:5px;}
+.pr-5{padding-right:5px;}
+.pt-10{padding-top:10px;}
+.pb-10{padding-bottom:10px;}
+.pl-10{padding-left:10px;}
+.pr-10{padding-right:10px;}
+.pt-15{padding-top:15px;}
+.pb-15{padding-bottom:15px;}
+.pl-15{padding-left:15px;}
+.pr-15{padding-right:15px;}
+.pt-20{padding-top:20px;}
+.pb-20{padding-bottom:20px;}
+.pl-20{padding-left:20px;}
+.pl-30{padding-left:30px;}
+.pr-20{padding-right:20px;}
+
+/* vertical align */
+.va-t{vertical-align:top;}
+.va-b{vertical-align:bottom;}
+.va-m{vertical-align:middle;}
+.ta-c{text-align:center;}
+.ta-l{text-align:left}
+.ta-r{text-align:right}
+.ti-2{text-indent:2em;}
+
+
+.navbar .brand {
+	padding: 5px 20px;
+}
+.form-title {
+	border-bottom: 1px solid #DDDDDD;
+}
+.links li.first {
+    padding-left: 0 !important;
+}
+.btn-toolbar {
+    margin-bottom: 9px;
+    margin-top: 9px;
+}
+#filter-holder ul li {
+    display: inline;
+    padding-left: 5px;
+}
+.input-append .add-on:last-child, .input-append .btn:last-child {
+    border-radius: 3px 3px 3px 3px;
+}
+.footer {
+	text-align: center;
+}
+.footer ul {
+    display: inline;
+    margin: 0;
+}
+.footer li {
+    background: url("/images/bkg_pipe.gif") no-repeat scroll 100% 50% transparent;
+    display: inline;
+    margin: 0;
+    padding: 0 8px 0 5px;
+}
+.footer ul.links {
+    display: block;
+	margin-top: 20px;
+}
+.footer .social ul li {
+    background: none repeat scroll 0 center transparent;
+    margin: 0 5px;
+    padding: 0;
+}
+.subhead {
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 30px;
+}
+#blog .span9 {
+    margin-left: 0 !important;
+}
+#blog .span4 {
+    margin-left: 0 !important;
+    margin-right: 10px;
+}
+.thumbnail {
+    border: medium none;
+    box-shadow: none;
+}
+.thumbnail p {
+    padding: 6px 0 8px;
+}
+.stagr .thumbnail {
+    background: url("/images/border.png") repeat-x scroll center bottom transparent;
+    border-radius: 4px 4px 0 0;
+    padding: 0;
+}
+.text-box {
+    border: 1px solid #DDDDDD;
+    color: #333333;
+    padding: 10px;
+    position: relative;
+}
+.text-box h3 a {
+	color:#222222;
+	text-decoration: none;
+}
+.article-footer {
+    border-top: 1px dashed #DDDDDD;
+    padding: 15px 0;
+}
+.widget {
+    padding: 0 0 20px;
+}
+.widget-heading {
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 20px;
+    padding: 0 0 8px;
+}
+.widget-heading h4 {
+    border-bottom: 1px solid #96D240;
+    display: inline;
+    padding: 0 0 10px;
+}
+.widget ul li a {
+    background: url("/images/arrow-icon.png") no-repeat scroll 0 50% transparent;
+    padding-left: 15px;
+}
+.widget ul li a {
+    color: #656565;
+}
+
+div.tagsinput { 
+	border:1px solid #CCC; 
+	background: #FFF; 
+	padding:4px 6px; 
+	width:530px; 
+	height:30px;
+	border-radius:4px 4px 4px 4px;
+	overflow-y: auto;
+}
+div.tagsinput span.tag { 
+	border: 1px solid #a5d24a; 
+	-moz-border-radius:2px; 
+	-webkit-border-radius:2px; 
+	display: block; 
+	float: left; 
+	padding: 3px; 
+	text-decoration:none; 
+	background: #cde69c; 
+	color: #638421; 
+	margin-right: 5px; 
+	margin-bottom: 3px;
+	font-family: helvetica;  
+	font-size:12px;
+	border-radius:4px 4px 4px 4px;
+}
+div.tagsinput span.tag a { 
+	font-weight: bold; 
+	color: #82ad2b; 
+	text-decoration:none; 
+	font-size: 11px;  
+} 
+div.tagsinput input { 
+	width:80px; 
+	margin:0px; 
+	font-family: helvetica; 
+	font-size: 13px; 
+	border:1px solid transparent; 
+	padding:5px; 
+	background: transparent; 
+	color: #000; 
+	outline:0px;  
+	margin-right:5px; 
+	margin-bottom:5px; 
+}
+div.tagsinput div { 
+	display:block; 
+	float: left; 
+} 
+.tags_clear { 
+	clear: both; 
+	width: 100%; 
+	height: 0px; 
+}
+.not_valid {
+	background: #FBD8DB !important; 
+	color: #90111A !important;
+}
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 30px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 0px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+.featurette-image {
+  margin-top: -20px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+.contact {
+    background: url('/images/store.jpg') left top no-repeat; 
+	height: 750px;
+}
+.contact address {
+	margin-top: 120px;
+	width: 500px;
+	background: #333333;
+    background: rgba(0, 0, 0, 0.75);
+	color: #fff;
+	padding: 20px 30px 30px;
+	line-height: 30px;
+}

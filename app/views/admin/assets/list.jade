@@ -1,0 +1,38 @@
+extends ../../layouts/admin
+
+block formbox
+	.form-title
+		h3 
+			| 附件列表
+			.btn-group.pull-right
+				a.btn.btn-inverse.dropdown-toggle(href="#",data-toggle="dropdown")
+					管理选项
+					span.caret
+				ul.dropdown-menu
+					li
+						a(href="/admin/assets/new") 新建
+	table.table.table-striped
+		thead
+			tr
+				th 
+				th 图片
+				th 管理操作
+		tbody
+			each asset in assets
+				tr
+					td
+						input(type="checkbox",name="id[]")=asset.id
+					td
+						img(src="/asset/#{asset.original_file}",width="100px",height="75px")
+						span.ml-10 名称：#{asset.filename}
+						span.ml-10 尺寸：#{asset.width}*#{asset.height}px
+					td
+						form.center.form-inline.confirm(action="/admin/assets", method="post")
+							input(type="hidden", name="_method", value="DELETE")
+							input(type="hidden", name="id", value="#{asset.id}")
+							button.btn.btn-danger(type="submit") 删除
+	hr
+	if (pages > 1)
+		div.pagination
+			ul
+				!= createPagination(pages, page)

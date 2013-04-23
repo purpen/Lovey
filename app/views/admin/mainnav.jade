@@ -1,0 +1,58 @@
+div.sidebar-nav
+	div.well
+		ul.nav.nav-list
+			li.nav-header 管理控制台
+			- if (menu_admin == 'dashboard')
+				li.active 
+					a(href="/admin")
+						i.icon-home 
+						| Dashboard
+			- else
+				li 
+					a(href="/admin")
+						i.icon-home 
+						| Dashboard
+			- if (menu_admin == 'articles')
+				li.active
+					a(href="/admin/articles")
+						i.icon-edit 
+						文章管理
+			- else
+				li
+					a(href="/admin/articles")
+						i.icon-edit 
+						文章管理
+			li
+				a(href="/admin/users")
+					i.icon-user 
+					用户管理
+			- if (menu_admin == 'category')
+				li.active
+					a(href="/admin/category")
+						i.icon-picture 
+						分类管理
+			- else
+				li
+					a(href="/admin/category")
+						i.icon-picture 
+						分类管理
+			li
+				a(href="/admin/comments")
+					i.icon-comment 
+					评论管理
+			- if (menu_admin == 'assets')
+				li.active
+					a(href="/admin/assets")
+						i.icon-picture 
+						附件管理
+			- else
+				li
+					a(href="/admin/assets")
+						i.icon-picture 
+						附件管理
+			li.divider
+			li
+				a(href="/admin/gallery")
+					i.icon-comment
+					| Settings
+		

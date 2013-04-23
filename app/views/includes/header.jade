@@ -1,0 +1,29 @@
+header.dropdown
+  div.navbar.navbar-fixed-top.dropdown
+    div.navbar-inner.dropdown
+      div.container.dropdown
+        div.logo
+          a.brand(href="/")
+            img(src='/images/loveyself-logo.png',alt='悦惠尚品')
+        button.btn.btn-navbar(data-target=".nav-collapse",data-toggle="collapse",type="button")
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        div.nav-collapse.collapse.dropdown
+          div.login.dropdown
+            div.pull-left.nav-collapse.dropdown
+              ul#main-menu.nav.dropdown
+                li.menu-item
+                  a(href="/") 首页
+                li.menu-item
+                  a(href="/shop") Shop
+                li.menu-item
+                  a(href="/blog") 悦生活
+                li.menu-item
+                  a(href="/gift") 礼品卡
+                li.menu-item
+                  a(href="/contact") 联系我们
+             form.navbar-form.form-search.pull-right(action="/search",method="post",accept-charset="UTF-8")
+               .input-append
+                 input.span2.search-query(type="text",name="q")
+                 button.btn(type="submit") Search

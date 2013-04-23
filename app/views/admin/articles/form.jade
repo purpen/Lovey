@@ -1,0 +1,65 @@
+extends ../../layouts/admin
+
+block ajaxmsg
+	if (typeof errors !== 'undefined')
+		.fade.in.alert.alert-block.alert-error
+			a.close(data-dismiss="alert",href="javascript:void(0)") x
+			ul
+				each error in errors
+					li= error.type
+          
+block formbox
+	- var action = '/admin/articles'
+	if (!article.isNew)
+		- action += '/'+article.id
+	// Body content
+	form#article-from.form-horizontal(method="post",action=action,enctype="multipart/form-data")
+		if (!article.isNew)
+			input(type="hidden",name="_method",value="PUT")
+		fieldset
+			#legend
+				legend=title
+			div.control-group
+				label(class="control-label", for="tags") 封面图
+				.controls
+					div.fileupload.fileupload-new(data-provides="fileupload")
+						div.input-append
+							div.uneditable-input.span3
+								i.icon-file.fileupload-exists
+								span.fileupload-preview
+							span.btn.btn-file
+								span.fileupload-new Select file
+								span.fileupload-exists Change
+								input(type="file", name="image[]")
+							a.btn.fileupload-exists(href="#", data-dismiss="fileupload") Remove
+			div.control-group
+				label(class="control-label", for="title") 标题
+				.controls
+					input#title.input-xxlarge(type="text",name="title",value=article.title,placeholder="")
+			div.control-group
+				label(class="control-label", for="tags") 标签
+				.controls
+					input#tags.input-xxlarge(type="text",name="tags",value=article.tags,placeholder="")
+			
+			div.control-group
+				label(class="control-label", for="body") 内容
+				.controls
+					div.textarea
+						textarea#article-body(style="width: 640px; height: 350px;",name="body")=article.body
+			div.control-group
+				label(class="control-label") 发布状态
+				.controls
+					labe.radio.inline
+						input(type="radio", value="1", name="state", checked="checked") 
+						| 草稿
+					labe.radio.inline
+						input(type="radio", value="2", name="state")
+						| 发布
+					labe.radio.inline
+						input(type="radio", value="0", name="state")
+						| 删除
+			div.control-group
+				div.form-actions
+					button.btn.btn-primary(type="submit") 确认保存
+					&nbsp;
+					button.btn(type="button") 取消
